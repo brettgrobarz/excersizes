@@ -33,10 +33,8 @@
         console.log("true");
     }else {
         console.log ("false");
-    };
-
-    
-
+    }
+  };
 
 
 console.assert(ofAge(21) === true);
@@ -44,6 +42,40 @@ console.assert(ofAge(22) === true);
 console.assert(ofAge(18) === false);
 console.assert(ofAge(0) === false);
 console.assert(ofAge(-2) === false);
+
+/**
+ * Exercise 2 Part 2: getAge
+**/
+
+    function calculateAge(birthMonth, birthDay, birthYear) {
+
+        // Get Todays Date
+        var todayDate = new Date(),
+            todayYear = todayDate.getFullYear(),
+            todayMonth = todayDate.getMonth(),
+            todayDay = todayDate.getDate();
+
+        // Calculate Age
+        var age = todayYear - birthYear;
+
+        // Check month discrepancies
+        if (todayMonth < (birthMonth - 1)) {
+            age--;
+        }
+
+        // Check day discrepancies
+        if (((birthMonth - 1) == todayMonth) && (todayDay < birthDay)) {
+            age--;
+        }
+
+        // @return {Number} age
+        return age;
+    }
+
+console.assert(calculateAge)
+
+
+
 
     /**
      * @exercise 0 - angryGandalf (example)

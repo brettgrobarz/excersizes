@@ -26,12 +26,19 @@
         
 // Create function with name tellFortune and appropriate parameters
 // Take 4 arguments: number of children, partner's name, hometown, job title.
-        var tellFortune = function(number of children, partner's name, hometown, job title) {
-            return ('You are a' w ' from' x ' and married to' Y ' with' Z ' kids')};
+        var tellFortune = function(jobTitle, homeTown, partnerName, numChildren){
+            
 
   // Define string variable that will have that output
+        var w = jobTitle();
+        var x = homeTown();
+        var y = partnerName();
+        var z = numChildren();
 
   // Return that string
+      var lifeLine ('You are a' w ' from' x ' and married to' y ' with' z ' kids');
+
+    };
 
 console.assert(lifeLine('bball player', 'Spain', 'Shaq', 3) === 'You are a bball player from Spain and married to Shaq  with 3 kids.' ); 
 console.assert(lifeLine('stunt double', 'Japan', 'Ryan Gosling', 3000) === 'You are a stunt double from Japan and married to Ryan Gosling  with 3000 kids.');
