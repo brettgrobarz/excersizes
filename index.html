@@ -1,44 +1,48 @@
 <html>
 <head>
-	<title></title>
+	<title>My Repo</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <div>
     <h2>My Repo</h2>
     <p>This is my practice file for GitHub GUI and gh-pages.</p>
     	<ul>
-			<li><a href="http://brettgrobarz.github.io/exercises/angry-gandalf.html"></a></li>
+			<li><a href="angry-gandalf.html">Angry Gandalf</a></li>
+			<li><a href="life-line.html">Life Line</a></li>
+			<li><a href="MakerBeer.html">Maker Beer</a></li>
+			<li><a href="floats.html">Floats</a></li>
     	</ul>
     <a href="http://brettgrobarz.github.io/exercises" title="Link to my first gh-pages">My MakerSquare Exercises<a>
     	<script type="text/javascript">
 
     	var slap = function() {
-  		alert('SLAP');
+  			console.log('SLAP');
 	};
-		slap();
+			slap();
 
 		var kick = function (name) {
-		  alert(name + ' reproaches your behavior.');
+		  	console.log((name + ' reproaches your behavior.'));
 	};
-		kick('Billy');
+			console.log(kick('Billy'));
 
 		var doubleIt = function (x) {
-	  		alert(x + ' times two is ' + (x*2));
+	  		console.log((x + ' times two is ' + (x*2)));
 	};
-		doubleIt(8);
+			console.log(doubleIt(8));
 
 		var greet = function (name) {
-		  alert("Welcome, " + name);
+		  	console.log(("Welcome, " + name));
 	};
-		greet('Brett');
+			console.log(greet('Brett'));
 
 		function KanyeCase(verse) {
 			return verse.toUpperCase();
 	}
-		alert(KanyeCase("whatever"));
+		console.log(KanyeCase("whatever"));
 
-		var divideBy = function (x, y) {
-		  return (X/Y);
+		var divideBy = function (number1, number2) {
+		  return (number1 / number2);
 		}
 
 				var result = divideBy(50, 2);
