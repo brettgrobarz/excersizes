@@ -8,6 +8,12 @@
   <h2>Maker Beer</h2>
 <body>
 
+      Day: <input type="text" id="birthDay"><br>
+      Month: <input type="text" id="birthMonth"><br>
+      Year: <input type="text" id="birthYear"><br>
+      <button id="submit">Submit</button>
+
+        <div id="checkOfAge"></div>
      
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
@@ -39,11 +45,11 @@ ofAge(21)
     // calculate if that age is 21 or above.
     // Output true or false based on if the age is above age
 
-        console.assert(ofAge(21) === true);
-        console.assert(ofAge(22) === true);
-        console.assert(ofAge(18) === false);
-        console.assert(ofAge(0) === false);
-        console.assert(ofAge(-2) === false);
+     //   console.assert(ofAge(21) === true);
+     //   console.assert(ofAge(22) === true);
+     //   console.assert(ofAge(18) === false);
+     //   console.assert(ofAge(0) === false);
+     //   console.assert(ofAge(-2) === false);
 
 /**
  * Exercise 2 Part 2: getAge
@@ -111,37 +117,41 @@ var checkOfAge = function(birthMonth, birthDay, birthYear) {
     var age;
 
     if (age >= 21) {
-          return "true";
+          return "you're old"; 
           }
     else if (age < 21) {
-          return "false";
+          return "nice try";
           }
     else {
-        return "false";
+        return "dafuq";
           }
 };
 checkOfAge(12,01,1988);
 checkOfAge(1,1,2001);
 checkOfAge(1,1,1993);
 
+    
 
 
-}
     // takes 3 arguments: month, day, year.
     // Use the getAge function to calculate the age.
     // calculate if that age is 21 or above.
     // Output true or false based on if the age is above age
 
-console.assert(checkOfAge(12,01,1988) === true);
-console.assert(checkOfAge(1,1,1993) === true);
-console.assert(checkOfAge(1,1,2001) === false);
+//console.assert(checkOfAge(12,01,1988) === true);
+//console.assert(checkOfAge(1,1,1993) === true);
+//console.assert(checkOfAge(1,1,2001) === false);
+
+$("#submit").on('click', function() {
+      var birthDay = $("#birthDay").val();
+      var birthMonth = $("#birthMonth").val();
+      var birthYear = $("#birthYear").val();
+      var age = checkOfAge(birthDay, birthMonth, birthYear);
+      $("#checkOfAge").html(age);
+    });
 
   </script>
-      <form>
-      Birth Month: <input type="text" name="firstname"><br>
-      Birth Day: <input type="text" name="lastname">
-      Birth Year: <input type="text" name="lastname">
-      </form>
+      
 
 
 </body>
