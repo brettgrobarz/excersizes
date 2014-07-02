@@ -8,9 +8,9 @@
   <h2>Life Line</h2>
 <body>
 
-      <input type='text' id="name" />
+      <!-- <input type='text' id="name" />
       <button id="submitInput">Submit</button>
-      <div id="gandalfMessage"></div>
+      <div id="gandalfMessage"></div> -->
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
   </script>
@@ -30,23 +30,20 @@ var tellFortune = function (w, x, y, z) {
   return("You are a " + w + " from " + x + " and married to " + y + " with " + z + " kids.");
 };
 
-tellFortune('bball player', 'Spain', 'Shaq', '3');
-tellFortune('stunt double', 'Japan', 'Ryan Gosling', '3000');
-tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', '0');
+tellFortune('bball player', 'Spain', 'Shaq', 3);
+tellFortune('stunt double', 'Japan', 'Ryan Gosling', 3000);
+tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 0);
+
 // Take 4 arguments: number of children, partner's name, hometown, job title.
-        var tellFortune = function(jobTitle, homeTown, partnerName, numChildren){
+       // var tellFortune = function(jobTitle, homeTown, partnerName, numChildren){
             
 
   // Define string variable that will have that output
-        var w = jobTitle();
-        var x = homeTown();
-        var y = partnerName();
-        var z = numChildren();
+        
 
   // Return that string
-      var lifeLine ('You are a' w ' from' x ' and married to' y ' with' z ' kids');
+     // var lifeLine ('You are a' w ' from' x ' and married to' y ' with' z ' kids');
 
-    };
 
 console.assert(lifeLine('bball player', 'Spain', 'Shaq', 3) === 'You are a bball player from Spain and married to Shaq  with 3 kids.' ); 
 console.assert(lifeLine('stunt double', 'Japan', 'Ryan Gosling', 3000) === 'You are a stunt double from Japan and married to Ryan Gosling  with 3000 kids.');
@@ -54,40 +51,6 @@ console.assert(lifeLine('Elvis impersonator', 'Russia', 'The Oatmeal', 0) === 'Y
 
 
 
-    /**
-     * @exercise 0 - angryGandalf (example)
-     
-
-    // Define angryGandalf with input parameters
-    var angryGandalf = function(type) {
-
-      // Define the variables needed
-      var message;
-
-      // Run conditional on type for 'grey' and 'white'
-      if (type === 'grey') {
-        message = "YOU...SHALL NOT... PASS!";
-      } else if (type === 'white') {
-        message = "You merely passed me to your demise.";
-      } else {
-        message = "I don't think I'm Gandalf anymore.";
-      }
-
-      // Return message
-      return message
-
-    }
-
-    console.assert(angryGandalf('grey') === "YOU...SHALL NOT... PASS!");
-    console.assert(angryGandalf('white') === "You merely passed me to your demise.");
-    console.assert(angryGandalf(2) === "I don't think I'm Gandalf anymore.");
-
-    // Event Handler
-    $("#submitInput").on('click', function() {
-      var name = $("#name").val();
-      var message = angryGandalf(name);
-      $("#gandalfMessage").html(message);
-    });
 
   </script>
 
