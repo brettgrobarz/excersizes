@@ -1,0 +1,49 @@
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+header, footer {
+	text-align: center;
+	color: white;
+	font-family: helvetica;
+	background-color: #60aa49;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+p {
+	padding-bottom: 20px;
+}
+
+div {
+	text-align: center;
+	color: white;
+	font-family: helvetica;
+	border-radius: 4px;
+	padding: 20px;
+}
+
+.group {
+	display: inline-block;
+	background-color: #eaeaed;
+	text-align: center;
+	color: gray;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.main {
+	background-color: #60aa49;
+	width: 75%;
+	float: left;
+}
+
+.sidebar{
+	background-color: #60aa49;
+	width: 20%;
+	float: right;
+}
+
