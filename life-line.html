@@ -1,71 +1,68 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-  <title>Life Line</title>
-  
+  <title></title>
+  <style>
+    body, input, button {
+      font-size: 20pt;
+    }
+  </style>
 </head>
-  <h2>Life Line</h2>
 <body>
-     
-      Job <input type="text" id="w"><br>
-      Hometown: <input type="text" id="x"><br>
-      Partners Name: <input type="text" id="y"><br>
-      # of Children: <input type="text" id="z"><br>
-      <button id="submit">Submit</button>
-
-        <div id="sentenceOutput"></div>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+ 
+  <form>
+    <input type="text" id="jobTitle" placeholder="Job Title" />
+    <input type="text" id="hometown" placeholder="Hometown" />
+    <input type="text" id="partner" placeholder="Partner" />
+    <input type="text" id="children" placeholder="Children" />
+    <button type="submit" id="submit" >Submit</button>
+  </form>
+  <div id="message"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ 
+  <script>
+ 
+  /**
+   * @exercise 1 - lifeLine
+   * @description takes children, partner's name, hometown, and job
+   * @returns 'You are a W from X and married to Y  with Z kids.'
+  **/
+ 
+  // Create function with name tellFortune and appropriate parameters
+  // Take 4 arguments: number of children, partner's name, hometown, job title.
+    
+    var lifeLine = function( jobTitle, hometown, partner, children ) {
+ 
+      // Get first letter and make it lowercase
+      var firstLetter = jobTitle.charAt(0).toLowerCase();
+      // Check if first letter of jobTitle is a, e , i, o, or u
+      if(firstLetter === 'a' || firstLetter === 'e' || firstLetter === 'i' || firstLetter === 'o' || firstLetter === 'u') {
+ 
+          var a = 'an ';
+ 
+      } else {
+          var a = 'a ';
+      }
+ 
+      // Define string variable that will have that output
+      var whateverYouWant = "You are " + a + jobTitle + " from " + hometown + " and married to " + partner + " with " + children + " kids."; 
+      // Return that string
+      return whateverYouWant;
+ 
+    };
+ 
+  $("#submit").on('click', function (e){
+    e.preventDefault();
+    var jobTitle = $("#jobTitle").val();
+    var hometown = $("#hometown").val();
+    var partner = $("#partner").val();
+    var children = $("#children").val();
+ 
+    var message = lifeLine(jobTitle,hometown,partner,children);
+ 
+    $("#message").html(message);
+  });
+  
   </script>
-
-
-  <script type="text/javascript">
-
-        /**
-          * @exercise 1 - lifeLine
-        * @description takes children, partner's name, hometown, and job
-          * @returns 'You are a W from X and married to Y  with Z kids.'
-        **/
-        
-// Create function with name tellFortune and appropriate parameters
-
-var tellFortune = function (w, x, y, z) {
-  return("You are a " + w + " from " + x + " and married to " + y + " with " + z + " kids.");
-};
-
-tellFortune('bball player', 'Spain', 'Shaq', 3);
-tellFortune('stunt double', 'Japan', 'Ryan Gosling', 3000);
-tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 0);
-
-// Take 4 arguments: number of children, partner's name, hometown, job title.
-       // var tellFortune = function(jobTitle, homeTown, partnerName, numChildren){
-            
-
-  // Define string variable that will have that output
-        
-
-  // Return that string
-     // var lifeLine ('You are a' w ' from' x ' and married to' y ' with' z ' kids');
-
-
-//console.assert(lifeLine('bball player', 'Spain', 'Shaq', 3) === 'You are a bball player from Spain and married to Shaq  with 3 kids.' ); 
-//console.assert(lifeLine('stunt double', 'Japan', 'Ryan Gosling', 3000) === 'You are a stunt double from Japan and married to Ryan Gosling  with 3000 kids.');
-//console.assert(lifeLine('Elvis impersonator', 'Russia', 'The Oatmeal', 0) === 'You are a Elvis impersonator from Russia and married to The Oatmeal  with 0 kids.') ; 
-
-$("#submit").on('click', function() {
-      var w = $("#w").val();
-      var x = $("#x").val();
-      var y = $("#y").val();
-      var z = $("#z").val();
-      var message = tellFortune(w, x, y, z);
-      $("#sentenceOutput").html(message);
-    });
-
-
-
-  </script>
-
+ 
 </body>
-    <a href="index.html">Back to Index</a>
 </html>
