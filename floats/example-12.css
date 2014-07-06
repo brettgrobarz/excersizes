@@ -1,28 +1,59 @@
 /* ---------------------------------------------------------- */
 /* Float Examples for MakerSquare Front-End Class ----------- */
 /* created by Elyse Holladay @elyseholladay ----------------- */
-/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- *//*{
 
 /* Example 12 */
+
+/* {border: 1px solid black;} *//
+
+.container {
+	width: 100%;
+	height: 1000px;
+}
 
 /* To Do List */
 .todolist {}
 
 /* Individual Todo */
-.todo {}
-
+.todo {
+	float:left;
+	width: 80%;
+	border-bottom: 1px solid gray;
+	margin-left: 20px;
+	margin-right: 20px;
+}
 
 /* Priority icon dot */
-.icon {}
+.icon {
+	float: left;
+	clear: both;
+	width: 10%;
+	padding-top: 10px;
+	border-left: 15px;
+	margin-left: 20px;
+}
 
 /* Info of the todo, title and date */
 .todo-info {}
 
 /* Title */
-.todo-title {}
+.todo-title {
+	float: left;
+	width: 300px;
+	padding-top: 20px;
+}
 
 /* Date */
-.todo-date {}
+.todo-date {
+	float: left;
+	width: 300px;
+}
+
 
 /* Checkboxes! */
-input[type=checkbox] {}
+input[type=checkbox] {
+	float: right;
+	width: 15%;
+	clear: both;
+}
