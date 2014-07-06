@@ -10,14 +10,34 @@
 	margin: 0 auto;
 }
 
-.header {}
+.header {
+	width: 99%;
+	float: left;
+	clear: both;
+}
 
 
-.sidebar {}
+.sidebar {
+	float: left;
+	width: 33%;
+	height: 300px;
+}
 
-.main-content {}
+.main-content {
+	float: left;
+	width: 33%;
+	height: 300px;
+}
 
-.sub-content {}
+.sub-content {
+	float: left;
+	width: 33%;
+	height: 300px;
+}
 
 
-.footer {}
+.footer {
+	width: 99%;
+	float: left;
+	clear: both;
+}

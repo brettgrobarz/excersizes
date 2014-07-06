@@ -15,14 +15,14 @@
 
 .sidebar {
 	float: left;
-	width:734px;
+	width:700px;
 	height: 300px;
 	
 }
 
 .main-content {
 	float: right;
-	width: 250px;
+	width: 200px;
 	height: 300px;
 }
 
