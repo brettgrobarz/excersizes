@@ -5,55 +5,60 @@
 
 /* Example 12 */
 
-/* {border: 1px solid black;} *//
+/* {border: 1px solid black;} */
 
 .container {
-	width: 100%;
-	height: 1000px;
+	margin: auto;
+	width: 500px;
+	
 }
 
 /* To Do List */
-.todolist {}
+.todolist {
+	background-color: white;
+	border: 2px solid black;
+}
 
 /* Individual Todo */
 .todo {
-	float:left;
-	width: 80%;
-	border-bottom: 1px solid gray;
-	margin-left: 20px;
-	margin-right: 20px;
+	padding: 10px;
+	height: 100px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid black;
 }
 
 /* Priority icon dot */
 .icon {
 	float: left;
-	clear: both;
-	width: 10%;
-	padding-top: 10px;
-	border-left: 15px;
-	margin-left: 20px;
+	padding-right: 15px;
+	padding-left: 25px;
 }
 
 /* Info of the todo, title and date */
-.todo-info {}
+.todo-info {
+	float: left;
+
+}
 
 /* Title */
 .todo-title {
-	float: left;
-	width: 300px;
-	padding-top: 20px;
+	font-size: 25px;
 }
 
 /* Date */
 .todo-date {
-	float: left;
-	width: 300px;
+	
 }
 
 
 /* Checkboxes! */
-input[type=checkbox] {
+
+.check {
 	float: right;
-	width: 15%;
-	clear: both;
+	margin: 25px 0px 25px 0px;
+	padding-right: 15px;
 }
+
+input[type=checkbox] {}
+
+

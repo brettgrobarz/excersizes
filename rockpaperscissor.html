@@ -5,17 +5,13 @@
 </head>
 <body>
  
-  <form>
+  
     <button type="rock" id="rock"> Rock </button>
-     <button type="paper" id="paper"> Paper </button>
-      <button type="scissor" id="scissor"> Scissor </button>
+    <button type="paper" id="paper"> Paper </button>
+    <button type="scissor" id="scissors"> Scissors </button>
     
-    <!--<button type="submit" id="submit" >Submit</button> -->
 
-  </form>
-
-
-  <h1 id="message"></h1>
+    <h1 id="decision"></h1>
 
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
       </script>
@@ -23,16 +19,20 @@
       <script>
  
   
-    var userChoice = prompt("Do you choose rock, paper or scissors?");
+    var computerChoice = function(){
 
-    var computerChoice = Math.random();
-        if (computerChoice < 0.34) {
-        computerChoice = "rock";
-    } else if(computerChoice <= 0.67) {
-        computerChoice = "paper";
+    var choice = Math.random();
+        if (choice < 0.34) {
+            choice = "rock";
+    } else if(choice <= 0.67) {
+            choice = "paper";
     } else {
-        computerChoice = "scissors";
-    } console.log("Computer: " + computerChoice);
+            choice = "scissors";
+    } 
+        return choice;
+
+    }
+
 
   var compare = function(choice1, choice2) {
     if (choice1 === choice2) {
@@ -40,47 +40,59 @@
     }
     if (choice1 === "rock") {
         if (choice2 === "scissors") {
-            return "rock wins";
+            return "rock wins!";
         } else {
-            return "paper wins";
+            return "paper wins!";
         }
     }
     if (choice1 === "paper") {
         if (choice2 === "rock") {
             return "paper wins";
         } else {
-            return "scissors wins";
+            return "scissors wins!";
         }
     }
     if (choice1 === "scissors") {
         if (choice2 === "paper") {
             return "scissors wins";
         } else {
-            return "rock wins";
+            return "rock wins!";
         }
     }
 
   
 
-};
-compare(userChoice, computerChoice)
-    
- 
-    $("#rock").on('click', function (e){
-    e.preventDefault();
+}
 
-    $("#paper").on('click', function (e){
-    e.preventDefault();
-
-    $("#scissor").on('click', function (e){
-    e.preventDefault();
     
- 
-    var message = computerChoice(); 
- 
-    $("#message").html(message);
-    });
-  
+  // console.time("My kewl timer");
+
+  //           $('#rock').on('click', function(){
+  //              var result = compare('rock', computerChoice());
+  //              $("#decision").html(result);
+  //           });
+  //           $('#paper').on('click', function(){
+  //              var result = compare('paper', computerChoice());
+  //              $("#decision").html(result);
+  //           });
+  //           $('#scissors').on('click', function(){
+  //              var result = compare('scissors', computerChoice());
+  //              $("#decision").html(result);
+
+  //           console.timeEnd("My kewl timer");
+
+        // SHORTENED VERSION
+
+        console.time("My kewl timer");
+
+            $('#rock,#paper,#scissors').on('click', function(){
+               var result = compare('rock', computerChoice());
+               var result = compare('paper', computerChoice());
+               var result = compare('scissors', computerChoice());
+               $("#decision").html(result);
+            
+            console.timeEnd("My kewl timer");
+        });
   </script>
  
 </body>

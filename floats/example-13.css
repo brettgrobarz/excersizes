@@ -22,6 +22,10 @@ p {
 	margin: 0;
 }
 
+p3	{
+	font-size: .25em;
+}
+
 .p-question {
 	padding: 20px;
 	margin-bottom: 25px;
@@ -65,7 +69,7 @@ p {
 	text-align: center;
 	width: 16.66%;
 	background-color: #dae130;
-	color: white;
+	color: black;
 	border: 1px solid black;
 	font-size: 2em;
 	float: left;
@@ -176,8 +180,9 @@ button {
 }
 
 .btn:hover {
-  background: #dae130;
-  text-decoration: none;
+	color: black;
+  	background: #dae130;
+  	text-decoration: none;
 }
 
 
