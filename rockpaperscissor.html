@@ -22,76 +22,72 @@
     var computerChoice = function(){
 
     var choice = Math.random();
-        if (choice < 0.34) {
-            choice = "rock";
-    } else if(choice <= 0.67) {
-            choice = "paper";
-    } else {
-            choice = "scissors";
-    } 
-        return choice;
+                if (choice <= 0.34) {
+                    choice = "rock";
+            } else if(choice <= 0.67) {
+                    choice = "paper";
+            } else {
+                    choice = "scissors";
+            } 
+                return choice;
 
-    }
-
-
-  var compare = function(choice1, choice2) {
-    if (choice1 === choice2) {
-        return "The result is a tie!";
-    }
-    if (choice1 === "rock") {
-        if (choice2 === "scissors") {
-            return "rock wins!";
-        } else {
-            return "paper wins!";
         }
-    }
-    if (choice1 === "paper") {
-        if (choice2 === "rock") {
-            return "paper wins";
-        } else {
-            return "scissors wins!";
-        }
-    }
-    if (choice1 === "scissors") {
-        if (choice2 === "paper") {
-            return "scissors wins";
-        } else {
-            return "rock wins!";
-        }
-    }
 
-  
 
-}
-
+      var compare = function(choice1, choice2) {
+            if (choice1 === choice2) {
+                return "The result is a tie!";
+            }
+            if (choice1 === "rock") {
+                if (choice2 === "scissors") {
+                    return "rock wins!";
+                } else {
+                    return "paper wins!";
+                }
+            }
+            if (choice1 === "paper") {
+                if (choice2 === "rock") {
+                    return "paper wins";
+                } else {
+                    return "scissors wins!";
+                }
+            }
+            if (choice1 === "scissors") {
+                if (choice2 === "paper") {
+                    return "scissors wins";
+                } else {
+                    return "rock wins!";
+                }
+            }
+    }   
     
-  // console.time("My kewl timer");
+  console.time("My kewl timer");
 
-  //           $('#rock').on('click', function(){
-  //              var result = compare('rock', computerChoice());
-  //              $("#decision").html(result);
-  //           });
-  //           $('#paper').on('click', function(){
-  //              var result = compare('paper', computerChoice());
-  //              $("#decision").html(result);
-  //           });
-  //           $('#scissors').on('click', function(){
-  //              var result = compare('scissors', computerChoice());
-  //              $("#decision").html(result);
+            $('#rock').on('click', function(){
+               var result = compare('rock', computerChoice());
+               $("#decision").html(result);
+            });
+            $('#paper').on('click', function(){
+               var result = compare('paper', computerChoice());
+               $("#decision").html(result);
+            });
+            $('#scissors').on('click', function(){
+               var result = compare('scissors', computerChoice());
+               $("#decision").html(result);
 
-  //           console.timeEnd("My kewl timer");
+            console.timeEnd("My kewl timer");
 
         // SHORTENED VERSION
 
-        console.time("My kewl timer");
+            // console.time("My kewl timer");
 
-            $('#rock,#paper,#scissors').on('click', function(){
-               var result = compare('rock', computerChoice());
-               var result = compare('paper', computerChoice());
-               var result = compare('scissors', computerChoice());
-               $("#decision").html(result);
+            // $('#rock,#paper,#scissors').on('click', function(){
+            //    var result = compare('rock', computerChoice());
+            //    var result = compare('paper', computerChoice());
+            //    var result = compare('scissors', computerChoice());
+            //    $("#decision").html(result);
             
-            console.timeEnd("My kewl timer");
+            // console.timeEnd("My kewl timer");
         });
   </script>
  
