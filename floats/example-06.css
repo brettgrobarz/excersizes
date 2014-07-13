@@ -11,9 +11,19 @@
 }
 
 
+
+
 .main-content {
 	width: 984px;
 	float: left;
+}
+
+.main-content:after {
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
 }
 /* hint! what do you need to add here? */
 

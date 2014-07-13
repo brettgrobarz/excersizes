@@ -27,6 +27,13 @@
 	border-bottom: 1px solid black;
 }
 
+.todo:last-child {
+	padding: 10px;
+	height: 100px;
+	margin-bottom: 20px;
+	border-bottom: 0px solid black;
+}
+
 /* Priority icon dot */
 .icon {
 	float: left;
