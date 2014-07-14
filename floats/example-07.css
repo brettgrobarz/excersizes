@@ -13,8 +13,13 @@
 
 .header {
 	width: 90%;
-	float: left;
-	clear: both;
+	
+}
+
+.header:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
 .logo {
@@ -37,6 +42,12 @@
 	float: left;
 }
 
+.main-content:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 .sub-content {
 	float: right;
 	width: 60%;
@@ -45,6 +56,12 @@
 .sub-content-2 {
 	float: right;
 	width: 60%;
+}
+
+.main-content:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
 .footer {
